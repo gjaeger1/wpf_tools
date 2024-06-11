@@ -78,7 +78,7 @@ while [ $started -eq 0 ]; do
 
     sleep 1
     echo "Start experiment" 
-    tmux send-keys -t 'window 0' 'ros2 launch wpf_tools waypoint_follower.launch.py' C-m
+    tmux send-keys -t 'window 0' 'ros2 launch wpf_tools waypoint_follower.launch.py run_headless:=True' C-m
     start_time=$(date +%s)
 
     sleep 20

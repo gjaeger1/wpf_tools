@@ -13,8 +13,8 @@ while true; do
 
 
     tmux new-session -d -s "$SESSION" -d -x "$(tput cols)" -y "$(tput lines)"
-
     tmux rename-window -t 0 'window 0'
+
     echo "Start experiment" 
     tmux send-keys -t 'window 0' 'ros2 launch wpf_tools waypoint_follower.launch.py' C-m
     start_time=$(date +%s)
